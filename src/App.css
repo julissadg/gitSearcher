@@ -1,0 +1,27 @@
+.result-box{
+    background-color: #ededed;
+}
+
+.user-contairner{
+    display: flex;
+}
+
+.home-dashboard {
+    text-align: center;
+    width: 63%;
+}
+.home-dashboard-title{
+    margin-top: 100px;
+    font-family: 'Roboto', sans-serif;
+}
+.home-dashboard-container{
+    text-align: center;
+}
+.item-dashboard{
+    display: inline-block !important;
+    padding: 2% !important
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+}
