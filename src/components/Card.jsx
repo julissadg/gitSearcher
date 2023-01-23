@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 const Card = ({ data }) => {
     const {
         full_name = '',
@@ -10,7 +12,7 @@ const Card = ({ data }) => {
         forks = '',
         description = '',
         created_at = ''
-    } = data;
+    } = data; //destructuring data from the repository
 
     const dateFormat = (date) => new Date(date).toLocaleDateString('en-US');
 
@@ -90,5 +92,8 @@ const Card = ({ data }) => {
         </div>
     )
 }
+Card.propTypes = {
+    data: PropTypes.object.isRequired
+  };
 
 export default Card;

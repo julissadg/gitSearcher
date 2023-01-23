@@ -1,11 +1,12 @@
 import React, { useState } from 'react'
+import PropTypes from 'prop-types';
 
 const Search = ({request, setData, repoSearch = false, title}) => {
     const [formData, setformData] = useState({
         user:'',
         repo:''
-    });
-    const [error, setError] = useState(null);
+    }); //store all form values
+    const [error, setError] = useState(null);//handle form errors
     const handleChange = (e) => {
         let field = e.target.name;
         let val = e.target.value;
@@ -49,5 +50,10 @@ const Search = ({request, setData, repoSearch = false, title}) => {
         </>
     )
 }
-
-export default Search
+Search.propTypes = {
+    request: PropTypes.func.isRequired,
+    setData: PropTypes.func.isRequired,
+    repoSearch: PropTypes.bool,
+    title: PropTypes.string.isRequired
+  };
+export default Search;

@@ -19,7 +19,7 @@ const Users = () => {
     public_repos = '',
     public_gists = '',
     twitter_username = ''
-  } = data;
+  } = data; //destructuring data from the user
 
   return (
     <>
